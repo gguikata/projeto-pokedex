@@ -1,0 +1,56 @@
+@import "../app/type-color/type-color.scss";
+.header {
+  gap: 50px;
+  justify-content: center;
+  display: flex;
+  background-color: #eb9961;
+  height: 100px;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+.imagens {
+  width: 240px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  background-color: #965d62;
+}
+.generations {
+  margin: 20px 0 0 10px;
+  color: white;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 290px;
+  border-radius: 15px;
+  background-color: #eaeac7;
+}
+.pokemon-type {
+  gap: 15px;
+  display: flex;
+  margin: 4px 0;
+  color: white;
+}
+.name {
+  margin: -8px 0;
+}
