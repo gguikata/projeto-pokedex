@@ -1,0 +1,30 @@
+<div class="body">
+  <div class="generations">
+    <h4 class="generation1" [routerLink]="['/generation1']">1ª Geração</h4>
+    <h4 class="generation2" [routerLink]="['/generation2']">2ª Geração</h4>
+    <h4 class="generation3" [routerLink]="['/generation3']">3ª Geração</h4>
+  </div>
+  <div class="main">
+    <div class="pokemon-cards">
+      <div
+        class="pokemon-card"
+        [routerLink]="['../pokemon-card', pokemon.id]"
+        *ngFor="let pokemon of pokemonList"
+      >
+        <img
+          class="imagens"
+          [src]="pokemon.sprites.other['official-artwork'].front_default"
+        />
+        <p class="name">
+          #{{ zeroEsquerda(pokemon.id, pokemon.id.length) }}
+          {{ pokemon.name }}
+        </p>
+        <div class="pokemon-type">
+          <p [ngClass]="type.type.name" *ngFor="let type of pokemon.types">
+            {{ type.type.name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

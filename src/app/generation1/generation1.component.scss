@@ -1,0 +1,85 @@
+@import "/src/app/type-color/type-color.scss/";
+#search {
+  background-color: #2f4f4f;
+  border: solid 1px;
+  border-radius: 15px;
+  width: 300px;
+  display: flex;
+}
+
+#txtBusca {
+  float: left;
+  background-color: transparent;
+  padding-left: 5px;
+  font-style: italic;
+  font-size: 18px;
+  border: none;
+  height: 32px;
+  width: 260px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  background-color: #965d62;
+}
+.generations {
+  margin: 20px 0 0 10px;
+  color: white;
+  font-size: 1.5rem;
+}
+.generation1:hover {
+  color: grey;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.generation2:hover {
+  color: grey;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.generation3:hover {
+  color: grey;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.imagens {
+  width: 240px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 290px;
+  border-radius: 15px;
+  background-color: #eaeac7;
+  cursor: pointer;
+}
+.pokemon-card:hover {
+  background-color: #eacba6;
+  transition: 0.3s;
+}
+.pokemon-type {
+  gap: 15px;
+  display: flex;
+  margin: 4px 0;
+  color: white;
+}
+.name {
+  margin: -8px 0;
+}

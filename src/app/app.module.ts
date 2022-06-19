@@ -5,9 +5,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiInterceptor } from './auth/api.interceptor';
+import { Generation1Component } from './generation1/generation1.component';
+import { Generation2Component } from './generation2/generation2.component';
+import { Generation3Component } from './generation3/generation3.component';
+import { InitialComponent } from './initial/initial.component';
+import { PokemonCardComponent } from './generation1/pokemon-card/pokemon-card.component';
+import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    Generation1Component,
+    Generation2Component,
+    Generation3Component,
+    InitialComponent,
+    PokemonCardComponent,
+    PokemonDetailsComponent,
+    HomeComponent,
+    HeaderComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
