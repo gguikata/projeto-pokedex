@@ -1,11 +1,28 @@
-<div class="all">
-  <header class="header">
-    <img
-      src="../assets/Pokedex.1.gen/pokebola.png"
-      alt=""
-      style="max-height: 80px; max-width: 80px"
-    />
-    <h1 class="title-text">Pokédex</h1>
-  </header>
-  <router-outlet></router-outlet>
+<div class="container">
+  <mat-toolbar>
+    <button
+      (click)="toggleGen()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon class="button">menu</mat-icon>
+    </button>
+
+    <div class="header">
+      <img
+        src="../assets/Pokedex.1.gen/pokebola.png"
+        style="max-height: 50px; max-width: 50px"
+      />
+      <h1 class="title">POKEDÉX</h1>
+    </div>
+
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+  <div [hidden]="hideGenMenu" class="generations">
+    <h1 class="generation1" [routerLink]="['/generation1']">1ª Geração</h1>
+    <h1 class="generation2" [routerLink]="['/generation2']">2ª Geração</h1>
+    <h1 class="generation3" [routerLink]="['/generation3']">3ª Geração</h1>
+  </div>
 </div>
+<router-outlet></router-outlet>

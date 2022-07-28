@@ -1,39 +1,25 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.container {
+  position: relative;
+}
 .header {
-  gap: 50px;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
-  background-color: #eb9961;
-  height: 100px;
   align-items: center;
-  font-size: 50px;
-  color: white;
+  width: 160px;
+  justify-content: space-between;
 }
-
-.imagens {
-  width: 240px;
-}
-.body {
-  display: grid;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  background-color: #965d62;
-}
-.generations {
-  margin: 20px 0 0 10px;
-  color: white;
-  font-size: 1.5rem;
-}
-.generation1:hover {
-  color: grey;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.generation2:hover {
-  color: grey;
-  transition: 0.3s;
-  cursor: pointer;
-}
+.generation1:hover,
+.generation2:hover,
 .generation3:hover {
   color: grey;
-  transition: 0.3s;
+  transition: 0.5s;
   cursor: pointer;
+}
+.generation {
+  padding: 20px 10px;
 }

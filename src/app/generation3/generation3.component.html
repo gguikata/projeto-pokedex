@@ -1,9 +1,5 @@
 <div class="body">
-  <div class="generations">
-    <h4 class="generation1" [routerLink]="['/generation1']">1ª Geração</h4>
-    <h4 class="generation2" [routerLink]="['/generation2']">2ª Geração</h4>
-    <h4 class="generation3" [routerLink]="['/generation3']">3ª Geração</h4>
-  </div>
+  <div class="generations"></div>
   <div class="main">
     <div class="pokemon-cards">
       <div class="pokemon-card" *ngFor="let pokemon of pokemonList">
@@ -16,7 +12,11 @@
           {{ pokemon.name }}
         </p>
         <div class="pokemon-type">
-          <p [ngClass]="type.type.name" *ngFor="let type of pokemon.types">
+          <p
+            [ngClass]="type.type.name"
+            class="type"
+            *ngFor="let type of pokemon.types"
+          >
             {{ type.type.name }}
           </p>
         </div>

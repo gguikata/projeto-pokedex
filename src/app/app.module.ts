@@ -13,6 +13,8 @@ import { PokemonCardComponent } from './generation1/pokemon-card/pokemon-card.co
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,13 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+  ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
   ],

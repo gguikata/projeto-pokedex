@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { PokemonService } from './shared/services/pokemon.service';
 
 @Component({
@@ -8,7 +8,6 @@ import { PokemonService } from './shared/services/pokemon.service';
 })
 export class AppComponent implements OnInit {
   pokemonList: any = [];
-
   constructor(public pokemonService: PokemonService) {}
 
   ngOnInit() {}
@@ -20,5 +19,10 @@ export class AppComponent implements OnInit {
       stringFormatada = '0' + stringFormatada;
     }
     return stringFormatada;
+  }
+  hideGenMenu = true;
+
+  toggleGen() {
+    this.hideGenMenu = !this.hideGenMenu;
   }
 }

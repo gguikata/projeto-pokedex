@@ -32,6 +32,11 @@ const routes: Routes = [
     path: 'pokemon-card/:id',
     component: PokemonCardComponent,
   },
+  {
+    path: '',
+    redirectTo: '/generation1',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

@@ -2,7 +2,7 @@
 .body {
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
-  background-color: #965d62;
+  background-color: rgb(76 76 76);
 }
 .generations {
   margin: 20px 0 0 10px;
@@ -31,6 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 .pokemon-cards {
   display: flex;
@@ -59,4 +60,10 @@
 }
 .name {
   margin: -8px 0;
+  margin-bottom: 3px;
+}
+.pokemon-card:hover {
+  background-color: #eacba6;
+  transition: 0.3s;
+  cursor: pointer;
 }
