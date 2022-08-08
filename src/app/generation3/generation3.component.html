@@ -2,7 +2,12 @@
   <div class="generations"></div>
   <div class="main">
     <div class="pokemon-cards">
-      <div class="pokemon-card" *ngFor="let pokemon of pokemonList">
+      <div
+        class="pokemon-card"
+        [routerLink]="['../pokemon-card', pokemon.id]"
+        *ngFor="let pokemon of pokemonList"
+        [ngClass]="pokemon?.types[0].type.name"
+      >
         <img
           class="imagens"
           [src]="pokemon.sprites.other['official-artwork'].front_default"
